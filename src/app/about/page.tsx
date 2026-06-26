@@ -175,7 +175,7 @@ export default function AboutPage() {
               <img src="https://images.pexels.com/photos/3825582/pexels-photo-3825582.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Research Institute" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent" />
               <div className="absolute bottom-8 left-8 max-w-[250px]">
-                <p className="text-white font-serif text-xl mb-2">"True luxury cannot be mass-produced. It must be discovered and studied."</p>
+                <p className="text-white font-serif text-xl mb-2">&quot;True luxury cannot be mass-produced. It must be discovered and studied.&quot;</p>
                 <p className="text-primary font-mono text-xs">GENEVA RESEARCH LAB</p>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                 For a century, our Geneva institute has documented over 14,000 geological phenomena to understand how immense pressure and time create flawless crystalline structures. We operate at the intersection of high jewelry and quantum physics.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                Every stone in the Antigravity collection is subjected to our proprietary <strong>Molecular Lattice Refraction Test</strong>, ensuring that only the top 0.01% of the world's minerals reach our ateliers. We don't just cut stones; we unlock their internal light.
+                Every stone in the Antigravity collection is subjected to our proprietary <strong>Molecular Lattice Refraction Test</strong>, ensuring that only the top 0.01% of the world&apos;s minerals reach our ateliers. We don&apos;t just cut stones; we unlock their internal light.
               </p>
               <button className="bg-transparent border border-primary text-primary hover:bg-primary hover:text-black transition-colors px-8 py-3 rounded-full font-bold tracking-wide">
                 View The Collection
