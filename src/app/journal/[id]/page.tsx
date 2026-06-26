@@ -69,7 +69,7 @@ export default async function ArticlePage({ params }: { params: { id: string } }
         {/* Main Content Body */}
         <div className="w-full md:w-3/4 max-w-3xl">
           <p className="text-xl md:text-2xl text-white/80 font-serif leading-relaxed mb-12 italic border-l-2 border-primary pl-6">
-            "{article.excerpt}"
+            &quot;{article.excerpt}&quot;
           </p>
           
           <div className="prose prose-invert prose-lg max-w-none text-muted-foreground font-sans leading-loose whitespace-pre-wrap">

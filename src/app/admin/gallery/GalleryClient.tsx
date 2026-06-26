@@ -78,7 +78,7 @@ export default function GalleryClient({ images }: { images: any[] }) {
               <div>
                 <label className="block text-sm text-muted-foreground mb-1">Grid Sizing (Tailwind Classes)</label>
                 <input required type="text" name="className" defaultValue="col-span-1 row-span-1" placeholder="e.g. md:col-span-2 row-span-2" className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:border-primary outline-none transition-colors" />
-                <p className="text-xs text-muted-foreground mt-2">Use 'md:col-span-2' for wide images, 'row-span-2' for tall images.</p>
+                <p className="text-xs text-muted-foreground mt-2">Use &apos;md:col-span-2&apos; for wide images, &apos;row-span-2&apos; for tall images.</p>
               </div>
 
               {/* Drag and Drop Zone */}
