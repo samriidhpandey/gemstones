@@ -6,9 +6,18 @@ import Reviews from "@/components/Reviews/Reviews";
 
 import { prisma } from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
-  const products = await prisma.product.findMany();
-  const gallery = await prisma.galleryImage.findMany();
+  let products = [];
+  let gallery = [];
+  
+  try {
+    products = await prisma.product.findMany();
+    gallery = await prisma.galleryImage.findMany();
+  } catch (error) {
+    console.error("Database connection failed:", error);
+  }
 
   return (
     <main className="flex min-h-screen flex-col">
