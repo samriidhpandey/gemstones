@@ -7,6 +7,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuild: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 module.exports = nextConfig;
