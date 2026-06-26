@@ -5,7 +5,7 @@ const nextConfig = {
     domains: [],
   },
   eslint: {
-    ignoreDuringBuild: true,
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
