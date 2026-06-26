@@ -178,7 +178,7 @@ export default function Reviews() {
                   <div>
                     <StarRating rating={review.rating} />
                     <h4 className="text-white font-bold text-xl mt-4 font-serif leading-tight group-hover:text-primary transition-colors duration-300">
-                      "{review.title}"
+                      &quot;{review.title}&quot;
                     </h4>
                   </div>
                 </div>

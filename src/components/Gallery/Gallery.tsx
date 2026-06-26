@@ -77,7 +77,7 @@ export default function Gallery({ images }: { images: any[] }) {
             THE GALLERY
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Immerse yourself in the raw, unrefined beauty of the world's most sought-after minerals before they are cut into masterpieces.
+            Immerse yourself in the raw, unrefined beauty of the world&apos;s most sought-after minerals before they are cut into masterpieces.
           </p>
         </div>
 

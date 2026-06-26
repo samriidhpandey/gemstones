@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-serif font-bold text-primary mb-4">Gemstone Luxury</h3>
             <p className="text-muted-foreground max-w-sm">
-              Discover the world's most exquisite and rare gemstones. Elevate your collection with our ethically sourced, premium gems.
+              Discover the world&apos;s most exquisite and rare gemstones. Elevate your collection with our ethically sourced, premium gems.
             </p>
           </div>
           <div>
