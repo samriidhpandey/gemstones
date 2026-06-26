@@ -17,7 +17,7 @@ export default async function JournalIndexPage() {
           The Journal
         </h1>
         <p className="text-muted-foreground text-lg">
-          Insights, scientific breakthroughs, and style guides from the world's most exclusive gemological institute.
+          Insights, scientific breakthroughs, and style guides from the world&apos;s most exclusive gemological institute.
         </p>
       </div>
 

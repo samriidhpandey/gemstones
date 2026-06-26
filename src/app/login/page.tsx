@@ -61,8 +61,8 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-8 text-center border-t border-white/10 pt-6">
-            <p className="text-white/50 text-sm">
-              Don't have an account?{' '}
+            <p className="text-white/60 font-mono text-sm">
+              Don&apos;t have an account?{' '}
               <Link href="/signup" className="text-primary hover:underline font-mono tracking-widest text-xs uppercase ml-2">
                 Create Account <ArrowRight size={12} className="inline-block" />
               </Link>
