@@ -95,19 +95,20 @@ export default function Hero() {
 
         {/* Content */}
         <div className="hero-content relative z-20 flex h-full flex-col items-center justify-center px-6 text-center pointer-events-none">
-          <h1 ref={titleRef} className="mb-6 font-serif text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
-            POSH KALEIDO GEMSTONES
+          <h1 ref={titleRef} className="mb-6 font-serif tracking-tight text-white drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)] flex flex-col items-center justify-center">
+            <span className="text-5xl font-bold md:text-7xl lg:text-8xl">POSH KALEIDO</span>
+            <span className="text-lg md:text-3xl font-light tracking-[0.5em] mt-2 md:mt-4 text-white/80 uppercase">Gemstones</span>
           </h1>
           <p className="mb-12 max-w-2xl text-lg md:text-xl font-medium text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Floating Brilliance Awaits. Discover ethically sourced, premium gemstones with immersive 3D previews.
           </p>
 
-          <Link href="/collections" className="pointer-events-auto">
+          <Link href="/collections" className="pointer-events-auto mt-4">
             <button
               ref={btnRef}
-              className="magnetic-btn group relative overflow-hidden rounded-full bg-black/40 backdrop-blur-md border border-white/20 px-10 py-4 font-serif text-lg tracking-[0.2em] uppercase text-white shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-500 hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              className="magnetic-btn group relative overflow-hidden rounded-full bg-black/40 backdrop-blur-md border border-white/20 px-6 py-3 md:px-10 md:py-4 font-serif text-sm md:text-lg tracking-[0.2em] uppercase text-white shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-500 hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer" />
               <span className="relative z-10">Explore Collection</span>
             </button>
           </Link>

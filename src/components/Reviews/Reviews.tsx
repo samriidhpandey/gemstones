@@ -76,8 +76,8 @@ const StarRating = ({ rating }: { rating: number }) => {
           key={i}
           className={`w-4 h-4 ${
             i < rating 
-              ? "fill-[#d4af37] text-[#d4af37]" 
-              : "fill-transparent text-[#d4af37]/30"
+              ? "fill-[#c4a989] text-[#c4a989]" 
+              : "fill-transparent text-[#c4a989]/30"
           }`}
         />
       ))}
@@ -200,7 +200,7 @@ export default function Reviews() {
                       <div className="flex items-center gap-2">
                         <span className="text-white font-semibold tracking-wide">{review.name}</span>
                         {review.verified && (
-                          <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold text-[#d4af37] bg-[#d4af37]/10 px-2 py-1 rounded-full border border-[#d4af37]/20">
+                          <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold text-[#c4a989] bg-[#c4a989]/10 px-2 py-1 rounded-full border border-[#c4a989]/20">
                             <CheckCircle2 className="w-3 h-3" />
                             Verified
                           </span>

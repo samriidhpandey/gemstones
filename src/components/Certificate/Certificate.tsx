@@ -124,11 +124,11 @@ export default function Certificate() {
           {/* Right Visual Content (The Certificate) */}
           <div className="cert-card-wrapper flex-1 relative w-full max-w-lg z-10 [perspective:1000px]">
             {/* The actual certificate visual */}
-            <div className="cert-card relative w-full aspect-[1/1.4] bg-[#f8f5f0] rounded-lg shadow-2xl p-8 border-[8px] border-double border-[#d4af37] flex flex-col justify-between transform-gpu">
+            <div className="cert-card relative w-full aspect-[1/1.4] bg-[#f8f5f0] rounded-lg shadow-2xl p-8 border-[8px] border-double border-[#c4a989] flex flex-col justify-between transform-gpu">
               
               {/* Certificate Header */}
-              <div className="text-center space-y-2 border-b-2 border-[#d4af37]/30 pb-6">
-                <div className="w-16 h-16 mx-auto mb-4 text-[#d4af37] opacity-80">
+              <div className="text-center space-y-2 border-b-2 border-[#c4a989]/30 pb-6">
+                <div className="w-16 h-16 mx-auto mb-4 text-[#c4a989] opacity-80">
                   <Award className="w-full h-full" />
                 </div>
                 <h4 className="font-serif text-2xl font-bold text-[#2a2a2a] uppercase tracking-widest">Certificate</h4>
@@ -143,7 +143,7 @@ export default function Certificate() {
               </div>
 
               {/* Certificate Footer / Signatures */}
-              <div className="flex justify-between items-end border-t border-[#d4af37]/30 pt-6">
+              <div className="flex justify-between items-end border-t border-[#c4a989]/30 pt-6">
                 <div className="text-center">
                   <div className="w-24 h-px bg-[#8a8a8a] mb-2 mx-auto"></div>
                   <p className="text-[#8a8a8a] text-[10px] uppercase">Master Gemologist</p>

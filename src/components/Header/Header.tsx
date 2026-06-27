@@ -65,7 +65,7 @@ export default function Header() {
         }`}
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
-          <Link href="/" className="text-2xl font-serif font-bold text-primary">
+          <Link href="/" className="text-2xl font-serif font-bold bg-gradient-to-r from-[#c4a989] via-[#e8dac8] to-[#c4a989] bg-clip-text text-transparent drop-shadow-sm transition-opacity hover:opacity-80">
             Posh Kaleido Gemstones
           </Link>
 
