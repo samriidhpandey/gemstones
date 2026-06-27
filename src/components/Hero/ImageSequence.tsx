@@ -19,8 +19,10 @@ export default function ImageSequence() {
     if (!context) return;
 
     // Set canvas dimensions
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = window.innerWidth * dpr;
+    canvas.height = window.innerHeight * dpr;
+    // We don't scale the context here because we handle ratio in render function
 
     const currentFrame = (index: number) => 
       `/hero-sequence/${index.toString().padStart(3, "0")}.webp`;
@@ -94,8 +96,9 @@ export default function ImageSequence() {
     }
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = window.innerWidth * dpr;
+      canvas.height = window.innerHeight * dpr;
       render();
     };
 

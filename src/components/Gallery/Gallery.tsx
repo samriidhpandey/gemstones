@@ -9,31 +9,31 @@ const galleryImages = [
     id: 1, 
     src: "/gems/gallery1.jpeg", 
     alt: "Blood Ruby Core", 
-    className: "col-span-1 md:col-span-2 row-span-2" 
+    className: "col-span-2 md:col-span-2 row-span-2" 
   },
   { 
     id: 2, 
     src: "/gems/gallery2.jpeg", 
     alt: "Amethyst Crystals", 
-    className: "col-span-1 row-span-1" 
+    className: "col-span-1 md:col-span-1 row-span-1 md:row-span-1" 
   },
   { 
     id: 3, 
     src: "/gems/gallery3.jpeg", 
     alt: "Raw Emerald Matrix", 
-    className: "col-span-1 row-span-2" 
+    className: "col-span-1 md:col-span-1 row-span-2 md:row-span-2" 
   },
   { 
     id: 4, 
     src: "/gems/gallery4.jpeg", 
     alt: "Uncut Sapphire", 
-    className: "col-span-1 row-span-1" 
+    className: "col-span-1 md:col-span-1 row-span-1 md:row-span-1" 
   },
   { 
     id: 5, 
     src: "/gems/gallery5.jpeg", 
     alt: "Sunset Opal", 
-    className: "col-span-1 md:col-span-2 row-span-1" 
+    className: "col-span-2 md:col-span-2 row-span-1 md:row-span-1" 
   },
 ];
 
@@ -81,7 +81,7 @@ export default function Gallery({ images }: { images: any[] }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[250px] gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[250px] gap-4 md:gap-6">
           {images.map((image) => (
             <div 
               key={image.id} 

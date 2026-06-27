@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ParticleSystem from "./ParticleSystem";
 import { ArrowDown } from "lucide-react";
 import ImageSequence from "./ImageSequence";
-
+import Link from "next/link";
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -95,19 +95,21 @@ export default function Hero() {
 
         {/* Content */}
         <div className="hero-content relative z-20 flex h-full flex-col items-center justify-center px-6 text-center pointer-events-none">
-          <h1 ref={titleRef} className="mb-6 font-serif text-5xl font-bold tracking-tight text-primary md:text-7xl lg:text-8xl drop-shadow-2xl">
-            GEMSTONE LUXURY
+          <h1 ref={titleRef} className="mb-6 font-serif text-5xl font-bold tracking-tight text-white md:text-7xl lg:text-8xl drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
+            POSH KALEIDO GEMSTONES
           </h1>
-          <p className="mb-12 max-w-2xl text-lg text-muted-foreground md:text-xl drop-shadow-md">
+          <p className="mb-12 max-w-2xl text-lg md:text-xl font-medium text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Floating Brilliance Awaits. Discover ethically sourced, premium gemstones with immersive 3D previews.
           </p>
 
-          <button
-            ref={btnRef}
-            className="magnetic-btn pointer-events-auto rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground shadow-lg transition-transform hover:scale-105"
-          >
-            Explore Collection
-          </button>
+          <Link href="/collections" className="pointer-events-auto">
+            <button
+              ref={btnRef}
+              className="magnetic-btn rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-transform hover:scale-105"
+            >
+              Explore Collection
+            </button>
+          </Link>
         </div>
 
         {/* Scroll Indicator */}

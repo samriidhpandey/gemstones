@@ -40,7 +40,7 @@ export default function FeaturedCollection({ items }: { items: any[] }) {
         
         <div className="absolute top-10 left-10 z-20">
           <h2 className="font-serif text-4xl font-bold tracking-tight text-primary drop-shadow-lg">FEATURED COLLECTIONS</h2>
-          <p className="text-muted-foreground mt-2 drop-shadow-md">Scroll horizontally to explore</p>
+
         </div>
 
         {/* Vertical centering wrapper */}

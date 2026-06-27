@@ -164,55 +164,57 @@ export default function Reviews() {
           </p>
         </div>
 
-        <div className="reviews-grid columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-          {reviews.map((review) => (
-            <div 
-              key={review.id} 
-              className="review-card group break-inside-avoid relative bg-gradient-to-br from-black/80 to-[#2a0e0e]/80 border border-white/10 rounded-3xl p-8 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(212,175,55,0.15)] hover:-translate-y-2 overflow-hidden"
-            >
-              {/* Massive background quote watermark */}
-              <Quote className="absolute -top-6 -right-6 w-32 h-32 text-primary opacity-5 transform -rotate-12 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 pointer-events-none" />
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-6">
-                  <div>
-                    <StarRating rating={review.rating} />
-                    <h4 className="text-white font-bold text-xl mt-4 font-serif leading-tight group-hover:text-primary transition-colors duration-300">
-                      &quot;{review.title}&quot;
-                    </h4>
-                  </div>
-                </div>
+        <div className="relative w-full overflow-hidden py-10 flex mask-image-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex w-max animate-marquee gap-8 pr-8 hover:[animation-play-state:paused]">
+            {[...reviews, ...reviews].map((review, index) => (
+              <div 
+                key={`${review.id}-${index}`} 
+                className="review-card w-[350px] md:w-[450px] flex-shrink-0 group relative bg-gradient-to-br from-black/80 to-[#2a0e0e]/80 border border-white/10 rounded-3xl p-8 backdrop-blur-md shadow-2xl transition-all duration-500 hover:border-primary/40 hover:-translate-y-2 overflow-hidden"
+              >
+                {/* Massive background quote watermark */}
+                <Quote className="absolute -top-6 -right-6 w-32 h-32 text-primary opacity-5 transform -rotate-12 group-hover:scale-110 group-hover:opacity-10 transition-all duration-700 pointer-events-none" />
                 
-                <p className="text-white/70 text-sm leading-loose mb-8 font-light italic">
-                  {review.text}
-                </p>
-                
-                <div className="flex items-center gap-4 border-t border-white/10 pt-6">
-                  {/* Avatar */}
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-yellow-700 flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0">
-                    <span className="text-black font-bold font-serif text-lg">
-                      {review.name.charAt(0)}
-                    </span>
-                  </div>
-
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <span className="text-white font-semibold tracking-wide">{review.name}</span>
-                      {review.verified && (
-                        <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold text-[#d4af37] bg-[#d4af37]/10 px-2 py-1 rounded-full border border-[#d4af37]/20">
-                          <CheckCircle2 className="w-3 h-3" />
-                          Verified
-                        </span>
-                      )}
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-6">
+                    <div>
+                      <StarRating rating={review.rating} />
+                      <h4 className="text-white font-bold text-xl mt-4 font-serif leading-tight group-hover:text-primary transition-colors duration-300">
+                        &quot;{review.title}&quot;
+                      </h4>
                     </div>
-                    <span className="text-white/40 text-xs mt-1 block uppercase tracking-wider">
-                      {review.location} • {review.date}
-                    </span>
+                  </div>
+                  
+                  <p className="text-white/70 text-sm leading-loose mb-8 font-light italic">
+                    {review.text}
+                  </p>
+                  
+                  <div className="flex items-center gap-4 border-t border-white/10 pt-6">
+                    {/* Avatar */}
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-yellow-700 flex items-center justify-center shadow-lg border border-white/20 flex-shrink-0">
+                      <span className="text-black font-bold font-serif text-lg">
+                        {review.name.charAt(0)}
+                      </span>
+                    </div>
+  
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <span className="text-white font-semibold tracking-wide">{review.name}</span>
+                        {review.verified && (
+                          <span className="flex items-center gap-1 text-[9px] uppercase tracking-widest font-bold text-[#d4af37] bg-[#d4af37]/10 px-2 py-1 rounded-full border border-[#d4af37]/20">
+                            <CheckCircle2 className="w-3 h-3" />
+                            Verified
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-white/40 text-xs mt-1 block uppercase tracking-wider">
+                        {review.location} • {review.date}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
       </div>
