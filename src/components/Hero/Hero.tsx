@@ -105,9 +105,10 @@ export default function Hero() {
           <Link href="/collections" className="pointer-events-auto">
             <button
               ref={btnRef}
-              className="magnetic-btn rounded-full bg-primary px-8 py-4 font-semibold text-primary-foreground shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-transform hover:scale-105"
+              className="magnetic-btn group relative overflow-hidden rounded-full bg-black/40 backdrop-blur-md border border-white/20 px-10 py-4 font-serif text-lg tracking-[0.2em] uppercase text-white shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-500 hover:bg-white/10 hover:border-white/40 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
             >
-              Explore Collection
+              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:animate-shimmer" />
+              <span className="relative z-10">Explore Collection</span>
             </button>
           </Link>
         </div>

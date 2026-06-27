@@ -9,7 +9,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gemstone Luxury 3D",
+  title: "Posh Kaleido Gemstones",
   description: "High-end ecommerce platform for luxury gemstones",
 };
 

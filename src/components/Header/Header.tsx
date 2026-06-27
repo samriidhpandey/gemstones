@@ -66,7 +66,7 @@ export default function Header() {
       >
         <div className="container mx-auto flex h-20 items-center justify-between px-6">
           <Link href="/" className="text-2xl font-serif font-bold text-primary">
-            Gemstone Luxury
+            Posh Kaleido Gemstones
           </Link>
 
           <nav className="hidden md:flex space-x-8">

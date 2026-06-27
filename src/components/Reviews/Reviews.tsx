@@ -147,14 +147,14 @@ export default function Reviews() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative w-full bg-[#1c0808] py-32 px-6 overflow-hidden perspective-[1000px]">
+    <section ref={containerRef} className="relative w-full bg-[#1c0808] py-32 px-0 md:px-6 overflow-hidden perspective-[1000px]">
       {/* Decorative luxury lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 opacity-[0.05] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none" />
 
-      <div className="container mx-auto max-w-7xl relative z-10">
+      <div className="container mx-auto max-w-7xl relative z-10 px-0">
         
-        <div className="review-header text-center mb-24">
+        <div className="review-header text-center mb-24 px-6 md:px-0">
           <h2 className="font-serif text-5xl md:text-6xl font-bold tracking-tight text-white mb-6 drop-shadow-xl">
             Words of <span className="text-primary italic">Trust</span>
           </h2>

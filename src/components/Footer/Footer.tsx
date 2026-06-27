@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-serif font-bold text-primary mb-4">Gemstone Luxury</h3>
+            <h3 className="text-2xl font-serif font-bold text-primary mb-4">Posh Kaleido Gemstones</h3>
             <p className="text-muted-foreground max-w-sm">
               Discover the world&apos;s most exquisite and rare gemstones. Elevate your collection with our ethically sourced, premium gems.
             </p>
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Gemstone Luxury. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Posh Kaleido Gemstones. All rights reserved.</p>
         </div>
       </div>
     </footer>
