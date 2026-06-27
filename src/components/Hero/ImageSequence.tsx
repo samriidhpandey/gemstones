@@ -32,18 +32,29 @@ export default function ImageSequence() {
 
     // Preload images
     let loadedCount = 0;
+    
+    const handleLoad = () => {
+      loadedCount++;
+      setLoaded(Math.floor((loadedCount / frameCount) * 100));
+    };
+
     for (let i = 1; i <= frameCount; i++) {
       const img = new window.Image();
       img.src = currentFrame(i);
       img.onload = () => {
-        loadedCount++;
-        setLoaded(Math.floor((loadedCount / frameCount) * 100));
+        handleLoad();
         if (i === 1) {
           render();
         }
       };
+      img.onerror = handleLoad; // Prevent hanging on missing/failed images
       images.push(img);
     }
+
+    // Force loader to dismiss after 10 seconds regardless of progress
+    const fallbackTimer = setTimeout(() => {
+      setLoaded(100);
+    }, 10000);
 
     let ctx = gsap.context(() => {
       gsap.to(airpods, {
@@ -93,6 +104,7 @@ export default function ImageSequence() {
 
     window.addEventListener("resize", handleResize);
     return () => {
+      clearTimeout(fallbackTimer);
       window.removeEventListener("resize", handleResize);
       ctx.revert();
     };
