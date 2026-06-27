@@ -23,7 +23,7 @@ export default function ImageSequence() {
     canvas.height = window.innerHeight;
 
     const currentFrame = (index: number) => 
-      `/hero-sequence/${index.toString().padStart(3, "0")}.png`;
+      `/hero-sequence/${index.toString().padStart(3, "0")}.webp`;
 
     const images: HTMLImageElement[] = [];
     const airpods = {
