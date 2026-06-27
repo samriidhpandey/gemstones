@@ -60,9 +60,19 @@ export default function ImageSequence() {
 
     function render() {
       if (!canvas || !context) return;
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      const img = images[airpods.frame];
+      
+      let targetFrame = Math.round(airpods.frame);
+      let img = images[targetFrame];
+
+      // If the target frame hasn't finished downloading, find the closest previous frame that has
+      while (targetFrame >= 0 && (!img || !img.complete)) {
+        targetFrame--;
+        img = images[targetFrame];
+      }
+
+      // Only clear and draw if we have a valid image to show
       if (img && img.complete) {
+        context.clearRect(0, 0, canvas.width, canvas.height);
         const hRatio = canvas.width / img.width;
         const vRatio = canvas.height / img.height;
         const ratio = Math.max(hRatio, vRatio);
