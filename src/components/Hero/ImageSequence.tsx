@@ -31,30 +31,17 @@ export default function ImageSequence() {
     };
 
     // Preload images
-    let loadedCount = 0;
-    
-    const handleLoad = () => {
-      loadedCount++;
-      setLoaded(Math.floor((loadedCount / frameCount) * 100));
-    };
-
+    // Preload images in the background without blocking
     for (let i = 1; i <= frameCount; i++) {
       const img = new window.Image();
       img.src = currentFrame(i);
       img.onload = () => {
-        handleLoad();
         if (i === 1) {
-          render();
+          render(); // Render first frame immediately
         }
       };
-      img.onerror = handleLoad; // Prevent hanging on missing/failed images
       images.push(img);
     }
-
-    // Force loader to dismiss after 10 seconds regardless of progress
-    const fallbackTimer = setTimeout(() => {
-      setLoaded(100);
-    }, 10000);
 
     let ctx = gsap.context(() => {
       gsap.to(airpods, {
@@ -104,29 +91,15 @@ export default function ImageSequence() {
 
     window.addEventListener("resize", handleResize);
     return () => {
-      clearTimeout(fallbackTimer);
       window.removeEventListener("resize", handleResize);
       ctx.revert();
     };
   }, []);
 
   return (
-    <>
-      {loaded < 100 && (
-        <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-background">
-          <div className="text-primary font-mono text-xl mb-4">Loading Assets</div>
-          <div className="w-64 h-1 bg-border rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-primary transition-all duration-300" 
-              style={{ width: `${loaded}%` }} 
-            />
-          </div>
-        </div>
-      )}
-      <canvas 
-        ref={canvasRef} 
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-    </>
+    <canvas 
+      ref={canvasRef} 
+      className="absolute inset-0 h-full w-full object-cover"
+    />
   );
 }
