@@ -19,23 +19,18 @@ export default function Hero() {
 
     // Stagger headline animation
     if (titleRef.current) {
-      const chars = titleRef.current.innerText.split("");
-      titleRef.current.innerText = "";
-      chars.forEach((char) => {
-        const span = document.createElement("span");
-        span.innerText = char;
-        span.className = "inline-block opacity-0 translate-y-8";
-        titleRef.current?.appendChild(span);
-      });
-
-      gsap.to(titleRef.current.children, {
-        duration: 0.8,
-        opacity: 1,
-        y: 0,
-        stagger: 0.05,
-        ease: "power3.out",
-        delay: 0.5,
-      });
+      gsap.fromTo(
+        titleRef.current.children,
+        { opacity: 0, y: 30 },
+        {
+          duration: 0.8,
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          ease: "power3.out",
+          delay: 0.5,
+        }
+      );
     }
 
     // Fade out text content on scroll
